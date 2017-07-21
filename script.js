@@ -10,7 +10,7 @@ $("document").ready(function() {
   // count and then calls the displayDogs function. 
   // Pass the dog count to the function
 
-  // write a click handler that adds 1 to the dog 
+  // write a click handler that removes 1 from the dog 
   // count and then calls the displayDogs function. 
   // Pass the dog count to the function
 
