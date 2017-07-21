@@ -14,40 +14,41 @@ Use variables and functions to add and remove puppy pictures on an html page.
 
 A function is a reusable set of instructions
 
-It looks like:
+Functions are defined. The function definition writes out all the things the function will do.
 ```
 function functionName() {
-  
+  // do stuff
 }
 ```
 
-You call a function to invoke it
+Functions do stuff only when they are called. Call a function by its name with parentheses after.
 ```
 functionName();
 ```
 
-They can make something change
+Some functions make something change
 ```
 function changeBackground() {
   $('body').css('background', 'red');
 }
 ```
 
-They can return a value
+Other functions return a value
 ```
 function getColor() {
   return 'red';
 }
 ```
 
-They can be used together!
+Functions can be used together!
 ```
 function changeBackground() {
   $('body').css('background', getColor());
 }
 ```
 
-They can take a parameter:
+Functions can take a parameter. A parameter is additional information given to the function that it can use to do something.
+You pass a parameter in the parentheses when you call a function.
 ```
 function changeBackground(colorName) {
   $('body').css('background', colorName);
@@ -59,8 +60,7 @@ changeBackground('red')
 
 Variables store data. They have a name you use to refer to the data.
 
-We use the word `var` to declare the variable. We use the `=` to assign a value to the variable.
-
+We use the word `var` to declare the variable. We use the `=` to define the value of the variable. Defining a value with the `=` is also called assigning a value.
 ```
 var x = 1;
 var y = 2;
