@@ -76,6 +76,15 @@ x = 2;
 ```
 What is the value of `x` in each line? How many times did we declare `x`? How many times did we assign a value to `x`?
 
+Variables can store lots of different types of data. Strings and numberse are common ones we'll start with.
+```
+var a = "I am a string!";
+var b = 'I am also a string';
+var c = 1;
+var d = 1.3456;
+```
+What types of values have been assigned to these variables?
+
 You can pass variables to functions as parameters
 ```
 function changeBackground(colorName) {
