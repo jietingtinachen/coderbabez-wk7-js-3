@@ -1,6 +1,7 @@
 $("document").ready(function() {
   // declare a variable that stores the number of
   // dog pictures to display on the page
+  var dog_count = 0;
 
   // write a function that increases the dog count by 1
 
@@ -9,13 +10,24 @@ $("document").ready(function() {
   // write a click handler that adds 1 to the dog 
   // count and then calls the displayDogs function. 
   // Pass the dog count to the function
+  $('#moreButton').click(function() {
+    changeCount(1);
+    displayDogs(dog_count);
+  });
 
   // write a click handler that removes 1 from the dog 
   // count and then calls the displayDogs function. 
   // Pass the dog count to the function
+  $('#lessButton').click(function() {
+    changeCount(-1);
+    displayDogs(dog_count);
+  });
 
   // Can you combine your functions that increase and
   // decrease the dog count into 1 function?
+  function changeCount(delta) {
+    dog_count = dog_count + delta;
+  }
 
   // Update the click handler so that it also displays
   // the current count value on the page
@@ -36,7 +48,6 @@ function displayDogs(count) {
     $('#dogs').append("<img src='" + dog(i) + "' />");
   }
 }
-
 
 function dog(index) {
   dogs = [
