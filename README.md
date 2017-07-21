@@ -110,3 +110,5 @@ Take a look at the live site:
 * https://www.w3schools.com/js/js_variables.asp
 * https://www.w3schools.com/js/js_functions.asp
 * https://api.jquery.com/click/
+* http://api.jquery.com/append/
+* https://api.jquery.com/empty/
