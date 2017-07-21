@@ -112,3 +112,4 @@ Take a look at the live site:
 * https://api.jquery.com/click/
 * https://api.jquery.com/append/
 * https://api.jquery.com/empty/
+* https://www.w3schools.com/jquery/jquery_ref_selectors.asp
