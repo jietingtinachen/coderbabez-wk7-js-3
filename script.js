@@ -1,18 +1,43 @@
 $("document").ready(function() {
-  // declare a variable that stores the number of
-  // dog pictures to display on the page
 
-  // write a function that increases the dog count by 1
 
-  // write a function decreases the dog count by 1
+  function setUpHandlers($root){
+    // declare a variable that stores the number of
+    // dog pictures to display on the page
+    var dogNumbers = 0;
 
-  // write a click handler that adds 1 to the dog 
-  // count and then calls the displayDogs function. 
-  // Pass the dog count to the function
+    // write a function that increases the dog count by 1
+   // write a function decreases the dog count by 1
 
-  // write a click handler that removes 1 from the dog 
-  // count and then calls the displayDogs function. 
-  // Pass the dog count to the function
+
+    function change_dog_number(number){
+      dogNumbers = dogNumbers + number
+    }
+    // write a click handler that adds 1 to the dog
+    $root.find(".moreButton").click(function(){
+      change_dog_number(+1);
+      displayDogs(dogNumbers);
+      $root.find(".dogCounter").html("There are "+ dogNumbers +" dogs here.");
+    });
+    // count and then calls the displayDogs function.
+    // Pass the dog count to the function
+
+    // write a click handler that removes 1 from the dog
+    // count and then calls the displayDogs function.
+    // Pass the dog count to the function
+    $root.find(".lessButton").click(function(){
+      change_dog_number(-1);
+      displayDogs(dogNumbers);
+      $root.find(".dogCounter").html("There are "+ dogNumbers +" dogs here.");
+    });
+
+    function displayDogs(count) {
+      $root.find('.dogs').empty();
+      for(var i=0; i<count; i++) {
+        $root.find('.dogs').append("<img src='" + dog(i) + "' />");
+      }
+    }
+  }
 
   // Can you combine your functions that increase and
   // decrease the dog count into 1 function?
@@ -25,18 +50,11 @@ $("document").ready(function() {
   // Create 2 columsn of dogs with 2 sets of buttons
   // You should be able to add/remove from each column
   // separately
-  // Put a border between the 2 colums  so you can 
+  // Put a border between the 2 colums  so you can
   // clearly see the difference
+  setUpHandlers($(".leftSide"));
+  setUpHandlers($(".rightSide"));
 });
-
-
-function displayDogs(count) {
-  $('#dogs').empty();
-  for(var i=0; i<count; i++) {
-    $('#dogs').append("<img src='" + dog(i) + "' />");
-  }
-}
-
 
 function dog(index) {
   dogs = [

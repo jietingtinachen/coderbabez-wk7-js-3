@@ -1,8 +1,16 @@
 body {
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
-#header {
+.leftSide{
+  width: 50%;
+}
+.rightSide{
+  width: 50%;
+}
+.header {
   background: white;
   color: #FFF;
   margin-bottom: 10px;
@@ -22,11 +30,11 @@ button:active {
   background: #555;
 }
 
-#dogs {
+.dogs {
   width: 100%;
 }
 
-#dogs img {
+.dogs img {
   width: 300px;
   padding: 10px;
   text-align: center;
